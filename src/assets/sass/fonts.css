@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Gentona";
+  src: url("../../assets/fonts/Gentona SemiBold.otf");
+  font-size: larger;
+}
+@font-face {
+  font-family: "GentonaLight";
+  src: url("../../assets/fonts/Gentona Light.otf");
+  font-size: medium;
+}
+@font-face {
+  font-family: "GentonaMedium";
+  src: url("../../assets/fonts/Gentona Medium.otf");
+  font-size: larger;
+}
+@font-face {
+  font-family: "ObviouslyWideMedium";
+  src: url("../../assets/fonts/Obviously-WideMedium.otf");
+}/*# sourceMappingURL=fonts.css.map */

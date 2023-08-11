@@ -1,0 +1,30 @@
+@import '../../assets/sass/mixin.scss';
+
+.grid {
+    margin-block-start: 20px;
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+}
+
+.gridCell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-block-start: 3px;
+    padding-block-end:3px;
+    padding-inline-start: 9px;
+    padding-inline-end: 9px;
+    cursor: pointer;
+    transition: background 0.25s cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    font: {
+        family: "Gentona";
+        weight: 600;
+        size: 1.1em;
+    }
+    &[highlighted="true"] {
+        background: var(--highlight-color) !important;
+    }
+}
+
+@include grid-media-queries;

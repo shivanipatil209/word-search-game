@@ -1,0 +1,146 @@
+@import './global.scss';
+
+// 2560px
+@mixin for-desktop-xlarge-only {
+    @media only screen and (min-inline-size: $desktop-xlarge) {
+        @content;
+    }
+}
+
+// 1920px
+@mixin for-desktop-large-only {
+    @media only screen and (min-inline-size: $desktop-large) {
+        @content;
+    }
+}
+
+// 1024px
+@mixin for-desktop-only {
+    @media only screen and (max-inline-size: $desktop) {
+        @content;
+    }
+}
+
+// 768px
+@mixin for-tablet-only {
+    @media only screen and (max-inline-size: $tablet) {
+        @content;
+    }
+}
+
+// 600px
+@mixin for-tablet-small-only {
+    @media only screen and (max-inline-size: $tablet-small) {
+        @content;
+    }
+}
+
+// 480px
+@mixin for-mobile-only {
+    @media only screen and (max-inline-size: $mobile) {
+        @content;
+    }
+}
+
+// 480px height
+@mixin for-mobile-height-only {
+    @media only screen and (max-block-size: $mobile) {
+        @content;
+    }
+}
+// 320px
+@mixin for-mobile-small-only {
+    @media only screen and (max-inline-size: $mobile-small) {
+        @content;
+    }
+}
+
+
+// media rules for Grid Component
+@mixin grid-media-queries {
+    @include for-desktop-large-only {
+        .gridCell {
+            font-size: 2vw;
+        }
+    }
+    
+    @include for-desktop-only {
+        .gridCell {
+            font-size: 4vw;
+        }
+    }
+    
+    @include for-tablet-only {
+        .gridCell {
+            font-size: 3.25vw;
+        }
+    }
+    
+    @include for-tablet-small-only {
+        .gridCell {
+            font-size: 2.5vw;
+        }
+    }
+    
+    @include for-mobile-only {
+        .grid {
+            block-size: 100%;
+        }
+        .gridCell {
+            padding: 2.25px;
+            font-size: 5vw;
+        }
+    }
+}
+
+// media rules for wordList component
+@mixin wordList-media-queries {
+    @include for-desktop-large-only {
+        .wordList {
+            padding: 0 15px;
+            > a, p { font-size: 1.75vw; }
+        }
+    }
+    
+    @include for-desktop-xlarge-only {
+        .wordList {
+            padding: 0 22.5px;
+            > a, p { font-size: 2vw; }
+        }
+    }
+    
+    @include for-desktop-only {
+        .wordList {
+            inline-size: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-inline-start: 1rem;
+            > a, p {
+                text-align: center;
+                font-size: 2.5vw;
+                padding: 10px;
+            }
+        }
+    }
+    
+    @include for-tablet-only {
+        .wordList {
+            font-size: 3vw;
+            padding-inline-start: 1.45rem;
+        }
+    }
+    
+    @include for-tablet-small-only {
+        .wordList {
+            font-size: 2.25vw;
+            padding-inline-start: 1.35rem;
+        }
+    }
+    
+    @include for-mobile-only {
+        .wordList {
+            padding: 0;
+            font-size: 3.5vw;
+        }
+    }
+}

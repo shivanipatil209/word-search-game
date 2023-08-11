@@ -1,0 +1,51 @@
+.grid {
+  margin-block-start: 20px;
+  display: grid;
+  grid-template-columns: repeat(15, 1fr);
+}
+
+.gridCell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  transition: background 0.25s cubic-bezier(0.1, 0.7, 1, 0.1);
+  font-family: "Gentona";
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.gridCell[highlighted=true] {
+  background: var(--highlight-color) !important;
+}
+
+@media only screen and (min-inline-size: 120em) {
+  .gridCell {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-inline-size: 64em) {
+  .gridCell {
+    font-size: 4vw;
+  }
+}
+@media only screen and (max-inline-size: 48em) {
+  .gridCell {
+    font-size: 3.25vw;
+  }
+}
+@media only screen and (max-inline-size: 37.5em) {
+  .gridCell {
+    font-size: 2.5vw;
+  }
+}
+@media only screen and (max-inline-size: 30em) {
+  .grid {
+    block-size: 100%;
+  }
+  .gridCell {
+    padding: 2.25px;
+    font-size: 5vw;
+  }
+}/*# sourceMappingURL=Grid.module.css.map */

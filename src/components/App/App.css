@@ -1,0 +1,41 @@
+:root {
+  --component-width: 90%;
+  --primary-font: "Montserrat", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  --primary-color: #1F0CAD;
+  --highlight-color: lightblue;
+  --transition-speed: 0.5s;
+  --border-radius: 0.25rem;
+  --size: 10;
+}
+
+#App {
+  min-block-size: 100vh;
+  inline-size: 80%;
+  justify-content:left;
+}
+
+.routes {
+  inline-size: calc(100% - 7.5rem);
+  margin-inline-start: 7.5rem;
+}
+
+@media only screen and (min-inline-size: 120em) {
+  .routes {
+    inline-size: calc(100% - 10rem);
+    margin-inline-start: 10rem;
+  }
+}
+@media only screen and (min-inline-size: 160em) {
+  .routes {
+    inline-size: calc(100% - 15rem);
+    margin-inline-start: 15rem;
+  }
+}
+@media only screen and (max-inline-size: 64em) {
+  .routes {
+    inline-size: 100%;
+    margin-inline-start: 0;
+    margin-block-end: 5.5rem;
+  }
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,93 @@
+@import '../../assets/sass/mixin.scss';
+@import  '../../assets/sass/fonts.scss';
+
+#gamename{
+    font-family:"ObviouslyWideMedium";
+}
+
+#help{
+  margin: 2px;
+  margin-inline-start: 10px;
+  margin-block-start: 20px;
+  padding: 5px 10px;
+  background-color: #0021A5;
+  color: white;
+  font-family: "GentonaMedium";
+  font-size: large;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.home {
+    block-size: 100%;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    margin-block-start: -5%;
+    margin-inline-end: 22%;
+}
+
+.gridWrapper {
+    block-size: 60%;
+    inline-size: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.help-popup-container {
+    border-radius: 8px;
+    border-color: #343741;
+    align-items: center; 
+    display: none;
+    position: fixed;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+    padding: 15px;
+    background-color: #FA4616;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Styling for the buttons */
+  #close {
+    padding: 5px;
+    block-size: 45px;
+    inline-size: 45px;
+    background-color: transparent;
+    color: black;
+    font-family: "Gentona";
+    font-size:larger;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-inline-start: 45%;
+  }
+    
+  #helptitle{
+    text-align: center;
+    color: black;
+    font-size: x-large;
+    font-family: "ObviouslyWideMedium"
+    
+  }
+  
+  #helpmsg{
+    color: white;
+    font-size: larger;
+    font-family: "GentonaMedium";
+    margin-block-start: 20px;
+  }
+
+
+@include for-desktop-only {
+    .gridWrapper {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+}
